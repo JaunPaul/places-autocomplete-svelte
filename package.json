@@ -21,7 +21,7 @@
 	"homepage": "https://github.com/alexpechkarev",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/alexpechkarev/places-autocomplete-svelte.git"
+		"url": "git+https://github.com/JaunPaul/places-autocomplete-svelte"
 	},
 	"bugs": {
 		"url": "https://github.com/alexpechkarev/places-autocomplete-svelte/issues"
@@ -60,7 +60,7 @@
 		"!dist/**/*.spec.*"
 	],
 	"publishConfig": {
-		"@alexpechkarev:registry": "https://npm.pkg.github.com",
+		"@kreonovo:registry": "https://npm.pkg.github.com",
 		"provenance": true
 	},
 	"peerDependencies": {

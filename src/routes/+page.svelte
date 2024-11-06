@@ -3,7 +3,6 @@
 	import PlaceAutocomplete from '$lib/PlaceAutocomplete.svelte';
 	import { browser } from '$app/environment';
 
-
 	// Full address as string
 	let formattedAddress = $state('');
 	// Formatted address object
@@ -82,14 +81,12 @@
 	// Display response in tabs
 	const tabs = [
 		{ name: 'Response', id: 1 },
-		{ name: 'Formatted Resposne', id: 2 },
-
+		{ name: 'Formatted Resposne', id: 2 }
 	];
 	let selectedTab = $state(tabs.find((tab) => tab.id === 1).id);
 	const placeholder = 'Search...';
 	const language = 'en-GB';
 	const region = 'GB';
-
 </script>
 
 <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -104,11 +101,17 @@
 	{/if}
 
 	<div class="my-2">
-		<PlaceAutocomplete {onError} {onResponse} {PUBLIC_GOOGLE_MAPS_API_KEY} bind:countries {placeholder} {language} {region}/>
+		<PlaceAutocomplete
+			{onError}
+			{onResponse}
+			{PUBLIC_GOOGLE_MAPS_API_KEY}
+			{placeholder}
+			{language}
+			{region}
+		/>
 
 		<img src="google_on_white_hdpi.png" alt="powered by Google" class="-mt-4" />
 	</div>
-
 
 	{#if Object.values(formattedAddressObj).filter((value) => value).length > 0}
 		<h1 class="text-base font-semibold leading-6 text-gray-900 mt-10">Response</h1>
@@ -206,7 +209,7 @@
 		<!-- Formatted response -->
 		{#if selectedTab === 2}
 			<div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-10">
-				<div >
+				<div>
 					<div class="sm:flex sm:items-center">
 						<div class="sm:flex-auto">
 							<h1 class="text-base font-semibold leading-6 text-gray-900">
@@ -214,7 +217,6 @@
 							</h1>
 						</div>
 					</div>
-
 				</div>
 				<div class="flex justify-end">
 					<button
@@ -231,8 +233,7 @@
 						class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
 						>Clear</button
 					>
-				</div>					
-
+				</div>
 
 				<!-- Street Number -->
 				<div class="mt-2">
@@ -307,13 +308,8 @@
 						{/each}
 					</select>
 				</div>
-
-	
-
-			
 			</div>
 		{/if}
-
 	{/if}
 
 	<footer class="bg-white">
