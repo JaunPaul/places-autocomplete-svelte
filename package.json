@@ -15,13 +15,13 @@
 		"address",
 		"address-input",
 		"input",
-		"search", 
+		"search",
 		"new api"
 	],
 	"homepage": "https://github.com/alexpechkarev",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/JaunPaul/places-autocomplete-svelte"
+		"url": "git+https://github.com/JaunPaul/places-autocomplete-svelte.git"
 	},
 	"bugs": {
 		"url": "https://github.com/alexpechkarev/places-autocomplete-svelte/issues"
