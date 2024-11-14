@@ -249,7 +249,7 @@
 						<!-- svelte-ignore a11y_invalid_attribute -->
 						<a
 							href="javascript:void(0)"
-							class="block w-full"
+							class="tw-block tw-w-full"
 							tabindex={i + 1}
 							onclick={() => onPlaceSelected(place.to_pace)}
 						>
@@ -277,6 +277,9 @@
 	.tw-block,
 	svg {
 		display: block;
+	}
+	.tw-absolute {
+		position: absolute;
 	}
 	*,
 	.tw-border-gray-300 {
