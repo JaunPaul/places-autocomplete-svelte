@@ -216,7 +216,7 @@
 		/>
 
 		{#if results.length > 0}
-			<div class="absolute inset-y-0 right-0 md:flex hidden py-1.5 pr-1.5">
+			<div class="absolute inset-y-0 right-0 md:flex hidden py-1.5 pr-1.5 no-mobile">
 				<kbd
 					class="inline-flex items-center rounded border border-gray-300 px-1 font-sans text-xs text-gray-500 w-8 mr-1"
 					>Esc</kbd
@@ -259,6 +259,11 @@
 </div>
 
 <style>
+	@media (max-width: 364px) {
+		.no-mobile {
+			display: none;
+		}
+	}
 	input,
 	ul {
 		margin: 0;
@@ -340,6 +345,23 @@
 		--tw-content: '';
 	}
 	:host,
+	section {
+		line-height: 1.5;
+		-webkit-text-size-adjust: 100%;
+		-moz-tab-size: 4;
+		-o-tab-size: 4;
+		tab-size: 4;
+		font-family:
+			system-ui,
+			sans-serif,
+			apple color emoji,
+			segoe ui emoji,
+			Segoe UI Symbol,
+			noto color emoji;
+		font-feature-settings: normal;
+		font-variation-settings: normal;
+		-webkit-tap-highlight-color: transparent;
+	}
 	kbd {
 		font-family:
 			ui-monospace,
@@ -355,6 +377,16 @@
 		font-size: 1em;
 	}
 	input,
+	select {
+		font-family: inherit;
+		font-feature-settings: inherit;
+		font-variation-settings: inherit;
+		font-size: 100%;
+		font-weight: inherit;
+		line-height: inherit;
+		letter-spacing: inherit;
+		color: inherit;
+	}
 	:-moz-focusring {
 		outline: auto;
 	}
