@@ -1,5 +1,5 @@
 {
-	"name": "places-autocomplete-svelte",
+	"name": "@kreonovo/places-autocomplete-svelte",
 	"license": "MIT",
 	"version": "2.0.9",
 	"description": "A lightweight and customizable Svelte component for easy integration of Google Maps Places Autocomplete (New API) in your Svelte/SvelteKit applications. Provides accessible autocomplete suggestions and detailed address retrieval.",
@@ -60,8 +60,8 @@
 		"!dist/**/*.spec.*"
 	],
 	"publishConfig": {
-		"@kreonovo:registry": "https://npm.pkg.github.com",
-		"provenance": true
+		"registry": "https://registry.npmjs.org/",
+		"provenance": false
 	},
 	"peerDependencies": {
 		"svelte": "^5.1.4"
